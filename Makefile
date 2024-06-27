@@ -18,13 +18,14 @@ clean:
 	rm -rf tests/har
 
 # Checkout openmct on specified branches
+# Checkout openmct on specified branches and set up the project
 checkout-openmct:
-	git -C openmct-master checkout master
-	git -C openmct-master pull origin master
-	git -C openmct-a11y-change1 checkout a11y-change1
-	git -C openmct-a11y-change1 pull origin a11y-change1
-	git -C openmct-a11y-change2 checkout a11y-change2
-	git -C openmct-a11y-change2 pull origin a11y-change2
+	git clone https://github.com/nasa/openmct.git openmct
+	cd openmct && git checkout master && git pull origin master
+	cd ..
+
+start-openmct:
+	cd openmct && nvm use && npm install && npm start &
 
 # Install k6 via Homebrew if macOS
 install-k6:
