@@ -1,0 +1,24 @@
+{
+    "name": "a11y-as-t9y",
+    "version": "0.0.1",
+    "description": "Demonstrating accessibility as a means to improve testability",
+    "main": "",
+    "scripts": {
+      "test:example": "K6_WEB_DASHBOARD=true k6 run --vus 10 --duration 30s tests/examples/script.js",
+      "test:example:browser": "k6 run tests/examples/browserScript.js",
+      "test:example:combined": "k6 run tests/examples/combinedScript.js",
+      "test:record": "npx playwright open",
+      "test:openmct": "K6_BROWSER_HEADLESS=false k6 run tests/openmct/createAndSearch.js",
+      "clean": "rm -rf tests/har"
+    },
+    "keywords": [],
+    "author": "John Hill",
+    "license": "ISC",
+    "devDependencies": {
+      "@types/k6": "0.52.0"
+    },
+    "dependencies": {
+      "playwright": "1.26.0"
+    }
+  }
+  
