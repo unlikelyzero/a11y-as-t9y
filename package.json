@@ -4,26 +4,32 @@
     "description": "Demonstrating accessibility as a means to improve testability",
     "main": "",
     "scripts": {
-      "test:e2e": "npx playwright test",
-      "test:e2e:xpath": "npx playwright test --grep @xpath",
-      "test:e2e:css": "npx playwright test --grep @css",
-      "test:e2e:id": "npx playwright test --grep @id",
-      "test:e2e:pom": "npx playwright test --grep @pom",
-      "test:e2e:a11y": "npx playwright test --grep @a11y",
-      "test:k6:example": "K6_WEB_DASHBOARD=true k6 run --vus 10 --duration 30s tests/examples/script.js",
-      "test:k6:example:browser": "k6 run tests/examples/browserScript.js",
-      "test:k6:example:combined": "k6 run tests/examples/combinedScript.js",
-      "test:record": "npx playwright open",
-      "test:k6:openmct": "K6_BROWSER_HEADLESS=false k6 run tests/openmct/createAndSearch.js"
+        "lint": "eslint tests/playwright",
+        "format": "prettier --write tests/playwright",
+        "test:e2e": "npx playwright test",
+        "test:e2e:xpath": "npx playwright test --grep @xpath",
+        "test:e2e:css": "npx playwright test --grep @css",
+        "test:e2e:id": "npx playwright test --grep @id",
+        "test:e2e:pom": "npx playwright test --grep @pom",
+        "test:e2e:a11y": "npx playwright test --grep @a11y",
+        "test:k6:example": "K6_WEB_DASHBOARD=true k6 run --vus 10 --duration 30s tests/examples/script.js",
+        "test:k6:example:browser": "k6 run tests/examples/browserScript.js",
+        "test:k6:example:combined": "k6 run tests/examples/combinedScript.js",
+        "test:record": "npx playwright open",
+        "test:k6:openmct": "K6_BROWSER_HEADLESS=false k6 run tests/openmct/createAndSearch.js"
     },
     "keywords": [],
     "author": "John Hill",
     "license": "ISC",
     "devDependencies": {
-      "@types/k6": "0.52.0"
+        "@eslint/js": "^9.14.0",
+        "@types/k6": "0.52.0",
+        "eslint": "^9.14.0",
+        "eslint-plugin-playwright": "^2.0.1",
+        "globals": "^15.12.0",
+        "prettier": "^3.3.3"
     },
     "dependencies": {
-      "@playwright/test": "1.48.0"
+        "@playwright/test": "1.48.0"
     }
-  }
-  
+}
