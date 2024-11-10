@@ -8,10 +8,11 @@ This project demonstrates how accessibility (a11y) can be leveraged to improve t
 
 - **Makefile**: Contains various commands to set up the environment, install dependencies, and manage the project.
 - **Tests**: Includes test scripts written for the k6 load testing tool, utilizing both HTTP and browser-based testing.
-  - `tests/openmct/createAndSearch.js`: A script to test the create and search functionality in Open MCT.
-  - `tests/examples/combinedScript.js`: A combined script for both browser and HTTP testing.
-  - `tests/examples/script.js`: A simple HTTP test script.
-  - `tests/examples/browserScript.js`: A browser-based test script for login functionality.
+  - `tests/k6/openmct/createAndSearch.js`: A script to test the create and search functionality in Open MCT.
+  - `tests/k6/examples/script.js`: A simple HTTP test script.
+  - `tests/k6/examples/browserScript.js`: A browser-based test script for login functionality.
+  - **Playwright Tests**: End-to-end tests using Playwright.
+    - `tests/playwright`: Directory containing Playwright test scripts.
 
 ## Setup and Usage
 
@@ -34,6 +35,10 @@ This project demonstrates how accessibility (a11y) can be leveraged to improve t
      ```sh
      npm run test:openmct
      ```
+   - To run Playwright end-to-end tests:
+     ```sh
+     npm run test:e2e
+     ```
 
 3. **Clean the Project**:
    - To clean up generated files:
@@ -46,3 +51,4 @@ This project demonstrates how accessibility (a11y) can be leveraged to improve t
 - [Open MCT GitHub Repository](https://github.com/nasa/openmct)
 - [k6 Documentation](https://k6.io/docs/)
 - [Grafana Documentation](https://grafana.com/docs/)
+- [Playwright Documentation](https://playwright.dev/docs/intro)

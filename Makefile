@@ -16,6 +16,8 @@ npm-install:
 clean:
 	rm -rf node_modules
 	rm -rf tests/har
+	rm -rf playwright-report
+	rm -rf test-results
 
 # Checkout openmct on specified branches
 # Checkout openmct on specified branches and set up the project

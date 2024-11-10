@@ -1,2 +1,4 @@
 node_modules
-openmct
+/app/openmct
+playwright-report/
+test-results/

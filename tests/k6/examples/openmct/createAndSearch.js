@@ -26,37 +26,37 @@ export const options = {
 export default async function () {
   const context = await browser.newContext();
   const page = await context.newPage();
-    try {
+  try {
     //Navigate to Open MCT
-    await page.goto("http://localhost:8080/", { waitUntil: "networkidle" });
-    sleep(1);
+    await page.goto("http://localhost:8082/", { waitUntil: "networkidle" });
+    await sleep(1);
 
-    //Click XPath Locator for Create
+    // // //Click XPath Locator for Create
     await page.locator('//*[@id="openmct-app"]/div/div[2]/div[1]/button').click();
 
     // //Click Create Button
-    // await page.locator('[aria-label="Create Button"]').click();
-    sleep(1);
+    await page.locator('[aria-label="Create Button"]').click();
+    await sleep(1);
     
     //Click Folder Menu Item
     await page.locator('[role="menuitem"][aria-label="Folder"]').click();
-    sleep(1);
+    await sleep(1);
 
     //Fill the name of the folder
     await page.locator('#form-name').fill('Meetup Demo');
-    sleep(1);
+    await sleep(1);
 
     //Click Save Button
     await page.locator('[aria-label="Save"]').click();
-    sleep(1);
+    await sleep(1);
 
     //Fill the search input with the name of the folder
     await page.locator('[aria-label="OpenMCT Search"] [aria-label="Search Input"]').fill('Meetup Demo');
-    sleep(1);
+    await sleep(1);
 
     // Press Enter in search
     await page.locator('[aria-label="OpenMCT Search"] [aria-label="Search Input"]').press('Enter');
-    sleep(1);
+    await sleep(1);
 
     //Assertion that newly created object appears in the result
     check(page, {
