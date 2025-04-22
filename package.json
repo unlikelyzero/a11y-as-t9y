@@ -10,6 +10,7 @@
         "test:e2e:xpath": "npx playwright test --grep @xpath",
         "test:e2e:css": "npx playwright test --grep @css",
         "test:e2e:id": "npx playwright test --grep @id",
+        "test:e2e:data-testid": "npx playwright test --grep @data-testid",
         "test:e2e:pom": "npx playwright test --grep @pom",
         "test:e2e:a11y": "npx playwright test --grep @a11y",
         "test:k6:example": "K6_WEB_DASHBOARD=true k6 run --vus 10 --duration 30s tests/examples/script.js",
